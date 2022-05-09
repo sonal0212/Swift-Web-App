@@ -1,0 +1,15 @@
+{
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "signup",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "sonal",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+
+}
