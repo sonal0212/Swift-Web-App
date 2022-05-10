@@ -3,30 +3,64 @@ $color-primary-light: #b7c5fb;
 $color-primary-dark: #4c6ef5;
 $btn-1: #0575e6;
 $btn-2: #021b79;
+$color-black: #000;
+$color-grey-light-1: #f7f7f7;
 
 .btn {
-  border-radius: 2rem;
-  border: 1px solid $color-primary-light;
-  background-image: linear-gradient(to right, $btn-1, $btn-2);
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 2.4rem;
-  padding: 1.2rem 4.5rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
+  &,
+  &:link,
+  &:visited {
+    border-radius: 2rem;
+    border: 1px solid $color-primary-light;
+    background-image: linear-gradient(to right, $btn-1, $btn-2);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2.4rem;
+    padding: 1.2rem 4.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
   &-hidden {
     background-color: transparent;
     border-color: $color-primary-dark;
   }
 
-  &:active {
-    transform: scale(0.95);
-  }
-
+  &:active,
   &:focus {
     outline: none;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    transform: transformY(-0.1rem);
   }
+}
+
+.btn--white {
+  background-color: $color-grey-light-1;
+  color: $color-grey-light-1;
+
+  &::after {
+    background-color: $color-grey-light-1;
+  }
+}
+
+.btn--animation {
+  animation: show 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.btn-2 {
+  background-color: transparent;
+  border-color: $color-primary-dark;
 }

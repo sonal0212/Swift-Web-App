@@ -113,7 +113,7 @@ p {
   .hidden-left {
     transform: translateX(-20%); }
 
-.btn {
+.btn, .btn:link, .btn:visited {
   border-radius: 2rem;
   border: 1px solid #b7c5fb;
   background-image: linear-gradient(to right, #0575e6, #021b79);
@@ -125,13 +125,36 @@ p {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   transition: transform 80ms ease-in; }
-  .btn-hidden {
-    background-color: transparent;
-    border-color: #4c6ef5; }
-  .btn:active {
-    transform: scale(0.95); }
-  .btn:focus {
-    outline: none; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn-hidden {
+  background-color: transparent;
+  border-color: #4c6ef5; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: transformY(-0.1rem); }
+
+.btn--white {
+  background-color: #f7f7f7;
+  color: #f7f7f7; }
+  .btn--white::after {
+    background-color: #f7f7f7; }
+
+.btn--animation {
+  animation: show 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.btn-2 {
+  background-color: transparent;
+  border-color: #4c6ef5; }
 
 .forms {
   background-color: #ffffff;
