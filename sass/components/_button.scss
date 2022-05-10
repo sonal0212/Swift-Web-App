@@ -1,0 +1,32 @@
+$color-primary: #5c7cfa;
+$color-primary-light: #b7c5fb;
+$color-primary-dark: #4c6ef5;
+$btn-1: #0575e6;
+$btn-2: #021b79;
+
+.btn {
+  border-radius: 2rem;
+  border: 1px solid $color-primary-light;
+  background-image: linear-gradient(to right, $btn-1, $btn-2);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2.4rem;
+  padding: 1.2rem 4.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+
+  &-hidden {
+    background-color: transparent;
+    border-color: $color-primary-dark;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

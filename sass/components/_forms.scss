@@ -1,25 +1,30 @@
-form {
+.forms {
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 5rem;
   height: 100%;
   text-align: center;
-}
 
-.form-container {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
+  &-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+  }
 }
 
 input {
+  border-radius: 1.5rem;
   background-color: #eee;
   border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
+  padding: 1.2rem 1.6rem;
+  margin: 0.8rem 0;
   width: 100%;
+
+  &:last-child {
+    padding-bottom: 3.2rem;
+  }
 }
